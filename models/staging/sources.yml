@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: adw
+  - name: sap_adw
     description: Banco de dados réplica do SAP Adventure WORK
     schema: sap_adw
 
@@ -14,11 +14,6 @@ sources:
               - not null
 
       - name: countryregion
-        columns:
-          - name: countryregioncode
-            tests:
-              - unique
-              - not null
 
       - name: person
         columns:

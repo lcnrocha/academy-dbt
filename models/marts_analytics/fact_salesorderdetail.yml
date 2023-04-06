@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fact_salesorderdetail
+    description: Tabela fato de vendas composta por cabeçalho e detalhes do pedido.
+
+    columns:
+      - name: sales_order_detail_sales_order_item_sk
+        description: Chave substituta para cada item do pedido.
+
+      - name: sales_order_detail_sales_order_id
+        description: pk origem salesorderdetail
+
+      - name: customer_fk
+        description: fk o id do cliente - Chave primária da tabela dim_customer
+      
+      - name: ship_address_fk
+        description: fk o id do endereço de entrega - Chave primária da tabela dim_address
+
+      - name: bill_address_fk
+        description: fk o id do endereço de cobrança - Chave primária da tabela dim_address
+
+      - name: credit_card_fk
+        description: fk o id do cartão de crédito - Chave primária da tabela dim_credit_card
+
+      - name: product_fk
+        description: fk o id do produto - Chave primária da tabela dim_product
+
+      - name: sales_reason_sales_order_fk
+        description: fk o id do motivo da venda - Chave primária da tabela dim_sales_reason
+
+      - name: sales_order_header_order_date
+        description: Data do pedido
+      
+      - name: sales_order_header_due_date
+        description: Data de vencimento do pagamento.
+      
+      - name: sales_order_header_ship_date
+        description: Data da entrega
+      
+      - name: sales_order_header_status
+        description: Status da venda.
+      
+      - name: sales_order_detail_order_quantity
+        description: Quantidade do produto.
+      
+      - name: sales_order_detail_unit_price
+        description: Preço unitário do produto.
+      
+      - name: sales_order_detail_unit_price_discount
+        description: Percentual de desconto por produto e por cada unidade.
+      
+      - name: sales_order_detail_sales_gross_value
+        description: Valor total por produto sem desconto.
+      
+      - name: sales_order_detail_sales_net_value
+        description: Valor líquido por produto com o desconto aplicado

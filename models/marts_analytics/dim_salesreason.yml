@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_salesreason
+    columns:
+      - name: sales_reason_sales_order_sk
+        description: Chave substituta para o `sales_order_header_sales_reason_sales_order_id`.
+
+      - name: sales_order_header_sales_reason_sales_order_id
+        description: Chave primária da tabela de origem `sales_reason`.
+
+      - name: sales_reason_name
+        description: Descrição do motivo da compra.
+      
+      - name: sales_reason_type
+        description: Descrição do tipo do motivo da compra.

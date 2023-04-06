@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_product
+    columns:
+      - name: product_sk
+        description: Chave substituta para o `product_id`
+
+      - name: product_id
+        description: Chave primária da tabela de origem `product`
+
+      - name: product_name
+        description: Nome do produto.
+      
+      - name: product_number
+        description: código do produto.
